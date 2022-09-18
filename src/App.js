@@ -1,14 +1,23 @@
 import './App.css';
+import Main from './components/Main';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#282c34",
+      contrastText: "#fff",
+    }
+  },
+  typography: {
+
+  }
+})
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Emmanuel Mohammed Lartey
-        <br/>
-        Dzorka
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Main />
+    </ThemeProvider>
   );
 }
 
